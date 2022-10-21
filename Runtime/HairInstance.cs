@@ -70,7 +70,7 @@ namespace Unity.DemoTeam.Hair
 			public struct SceneObjects
 			{
 				public GameObject groupContainer;
-
+				
 				public GameObject rootMeshContainer;
 				public MeshFilter rootMeshFilter;
 #if HAS_PACKAGE_DEMOTEAM_DIGITALHUMAN
@@ -528,16 +528,13 @@ namespace Unity.DemoTeam.Hair
 			}
 		}
 
-		void Update()
+		void LateUpdate()
 		{
 			UpdateStrandGroupInstances();
 			UpdateStrandGroupSettings();
 			UpdateAttachedState();
 			UpdatePrerequisite();
-		}
 
-		void LateUpdate()
-		{
 			HandlePrerequisite();
 		}
 
